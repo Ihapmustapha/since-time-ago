@@ -1,6 +1,6 @@
 {
   "name": "since-time-ago",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "npm module to convert time stamp into a readable format",
   "license": "MIT",
   "repository": {
