@@ -19,6 +19,15 @@ it("returns undefined if no input argument provided", () => {
   expect(since()).toBeUndefined();
 });
 
+it("returns error if input is invalid timestamp", () => {
+  expect.assertions(1);
+  try {
+    since("randomString");
+  } catch (e) {
+    expect(e.message).toBe("Invalid timestamp passed to 'since()'");
+  }
+});
+
 it("returns just now if time stamp is of a few seconds ago", () => {
   expect(since(nowTimestamp)).toBe("just now");
 });
@@ -32,7 +41,7 @@ it("returns num hours ago if time stamp is of a few hours ago", () => {
 });
 
 it("returns num days ago if time stamp is of a few days ago", () => {
-  expect(since(fiveDaysAgoTimestamp * 1000)).toBe("5 days ago");
+  expect(since(fiveDaysAgoTimestamp)).toBe("5 days ago");
 });
 
 it("returns num months ago if time stamp is of a few months ago", () => {
