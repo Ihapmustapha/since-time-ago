@@ -16,7 +16,7 @@ Formats a timestamp to:
 ## Install
 
 ```sh
-$ npm i @ihapmustapha/since-time-ago
+$ npm i since-time-ago
 ```
 
 ## Use
