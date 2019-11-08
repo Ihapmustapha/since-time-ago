@@ -1,33 +1,29 @@
 "use strict";
 
-let since = timeStamp => {
-  const seconds = Math.floor((new Date() - timeStamp * 1000) / 1000);
-  let interval = Math.floor(seconds / 31536000);
+let since = timestamp => {
+  const minute = 60 * 1000;
+  const hour = 60 * minute;
+  const day = 24 * hour;
+  const month = 30 * day;
+  const year = 12 * month;
 
-  if (interval > 1) {
-    return `${interval} years ago`;
-  }
-  interval = Math.floor(seconds / 2592000);
+  if (!timestamp) return undefined;
 
-  if (interval > 1) {
-    return `${interval} months ago`;
-  }
-  interval = Math.floor(seconds / 86400);
-
-  if (interval > 1) {
-    return `${interval} days ago`;
-  }
-  interval = Math.floor(seconds / 3600);
-
-  if (interval > 1) {
-    return `${interval} hours ago`;
-  }
-  interval = Math.floor(seconds / 60);
-
-  if (interval > 1) {
-    return `${interval} minutes ago`;
+  if (isNaN(new Date(timestamp).getTime())) {
+    throw new Error("Invalid timestamp passed to 'since()'");
   }
 
+  const difference = new Date().getTime() - timestamp;
+  if (Math.floor(difference / year) > 1)
+    return `${Math.floor(difference / year)} years ago`;
+  if (Math.floor(difference / month) > 1)
+    return `${Math.floor(difference / month)} months ago`;
+  if (Math.floor(difference / day) > 1)
+    return `${Math.floor(difference / day)} days ago`;
+  if (Math.floor(difference / hour) > 1)
+    return `${Math.floor(difference / hour)} hours ago`;
+  if (Math.floor(difference / minute) > 1)
+    return `${Math.floor(difference / minute)} minutes ago`;
   return `just now`;
 };
 
