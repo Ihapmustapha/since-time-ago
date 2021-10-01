@@ -1,5 +1,5 @@
 {
-  "name": "since-time-ago",
+  "name": "since-time-ago-typescript",
   "version": "2.1.0",
   "description": "typescript package to convert time stamp into a readable format",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "test": "npm run build && jest test.js"
   },
   "repository": {
-    "url": "https://github.com/Ihapmustapha/since-time-ago"
+    "url": "https://github.com/mrbrianevans/since-time-ago"
   },
   "main": "index.js",
   "keywords": [
