@@ -1,6 +1,6 @@
 // import since from "./index";
 
-let since = require("./index");
+import since from './index'
 
 const minute = 60 * 1000;
 const hour = 60 * minute;

@@ -1,3 +1,4 @@
+This fork added Typescript typing
 # since-time-ago
 
 [![npm(scooped)](https://img.shields.io/badge/npm-v1.1.1-blue)](https://www.npmjs.com/package/since-time-ago)

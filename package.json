@@ -1,8 +1,12 @@
 {
   "name": "since-time-ago",
   "version": "1.1.1",
-  "description": "npm module to convert time stamp into a readable format",
+  "description": "typescript package to convert time stamp into a readable format",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc --declaration",
+    "test": "npm run build && jest test.js"
+  },
   "repository": {
     "url": "https://github.com/Ihapmustapha/since-time-ago"
   },
@@ -15,6 +19,9 @@
     "timestamp"
   ],
   "devDependencies": {
-    "jest": "^24.9.0"
-  }
+    "@types/jest": "^27.0.2",
+    "jest": "^24.9.0",
+    "typescript": "^4.4.3"
+  },
+  "types": "index.d.ts"
 }
