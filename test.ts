@@ -2,6 +2,7 @@
 
 import since from './index'
 
+const second = 1000
 const minute = 60 * 1000;
 const hour = 60 * minute;
 const day = 24 * hour;
@@ -10,6 +11,7 @@ const year = 12 * month;
 
 const nowTimestamp = new Date().getTime();
 const fiveMinutesAgoTimestamp = nowTimestamp - 5 * minute;
+const fiveSecondsAgoTimestamp = nowTimestamp - 5 * second;
 const fiveHoursAgoTimestamp = nowTimestamp - 5 * hour;
 const fiveDaysAgoTimestamp = nowTimestamp - 5 * day;
 const fiveMonthsAgoTimestamp = nowTimestamp - 5 * month;
@@ -28,8 +30,12 @@ it("returns error if input is invalid timestamp", () => {
   }
 });
 
-it("returns just now if time stamp is of a few seconds ago", () => {
+it("returns just now if time stamp is less than 2 seconds ago", () => {
   expect(since(nowTimestamp)).toBe("just now");
+});
+
+it("returns num seconds ago if time stamp is of a few seconds ago", () => {
+  expect(since(fiveSecondsAgoTimestamp)).toBe("5 seconds ago");
 });
 
 it("returns num minutes ago if time stamp is of a few minutes ago", () => {

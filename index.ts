@@ -1,4 +1,5 @@
 let since = (timestamp?: string | number | Date) => {
+  const second = 1000
   const minute = 60 * 1000;
   const hour = 60 * minute;
   const day = 24 * hour;
@@ -22,6 +23,8 @@ let since = (timestamp?: string | number | Date) => {
     return `${Math.floor(difference / hour)} hours ago`;
   if (Math.floor(difference / minute) > 1)
     return `${Math.floor(difference / minute)} minutes ago`;
+  if (Math.floor(difference / second) > 1)
+    return `${Math.floor(difference / second)} seconds ago`;
   return `just now`;
 };
 
