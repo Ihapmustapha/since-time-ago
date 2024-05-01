@@ -1,13 +1,14 @@
-This fork added Typescript typing and num seconds ago
-# since-time-ago
+This fork added Typescript typing and num seconds ago.
+# since-time-ago-typescript
 
-[![npm(scooped)](https://img.shields.io/badge/npm-v1.1.1-blue)](https://www.npmjs.com/package/since-time-ago)
+[![npm(scooped)](https://img.shields.io/badge/npm-v1.1.1-blue)](https://www.npmjs.com/package/since-time-ago-typescript)
 
-since-time-ago converts timestamps into readable format
+since-time-ago-typescript converts timestamps into readable format
 
 Formats a timestamp to:
 
 - just now
+- 24 seconds ago
 - 3 minutes ago
 - 5 hours ago
 - 8 days ago
@@ -17,7 +18,7 @@ Formats a timestamp to:
 ## Install
 
 ```sh
-$ npm i since-time-ago
+$ npm i since-time-ago-typescript
 ```
 
 ## Use
@@ -26,7 +27,7 @@ This module exports a main function 'since()' that takes one argument 'timestamp
 timestamp formated in a readable form:
 
 ```js
-import since from "since-time-ago";
+import since from "since-time-ago-typescript";
 
 // Timestamps for one minute, one hour, one day, one month and one year
 const minute = 60 * 1000;
